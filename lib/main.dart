@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'provider/weather_api_client.dart';
-import 'screen/weather_screen.dart';
+import 'screen/home_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -44,7 +44,7 @@ class MainApp extends StatelessWidget {
             ),
           ),
         ),
-        home: WheatherScreen(),
+        home: HomeScreen(),
       ),
     );
   }

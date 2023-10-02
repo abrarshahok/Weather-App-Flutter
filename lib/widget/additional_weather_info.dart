@@ -19,7 +19,11 @@ class AdditionalWeatherInfo extends StatelessWidget {
     return 'West';
   }
 
-  Widget myContainer(BuildContext context, String title, String info) {
+  Widget myContainer({
+    required BuildContext context,
+    required String title,
+    required String info,
+  }) {
     return Container(
       margin: const EdgeInsets.all(10),
       width: 200,
@@ -70,9 +74,21 @@ class AdditionalWeatherInfo extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              myContainer(context, 'Wind Direction', windDirection),
-              myContainer(context, 'Wind Speed', '${weather!.windSpeed} K/H'),
-              myContainer(context, 'Wind Degree', '${weather!.windDegree}°'),
+              myContainer(
+                context: context,
+                title: 'Wind Direction',
+                info: windDirection,
+              ),
+              myContainer(
+                context: context,
+                title: 'Wind Speed',
+                info: '${weather!.windSpeed} K/H',
+              ),
+              myContainer(
+                context: context,
+                title: 'Wind Degree',
+                info: '${weather!.windDegree}°',
+              ),
             ],
           ),
         ),

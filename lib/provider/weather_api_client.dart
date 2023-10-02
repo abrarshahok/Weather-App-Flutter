@@ -44,7 +44,6 @@ class WeatherApiClient with ChangeNotifier {
         throw WeatherApiException(
             'Weather Data not available for location: $location');
       }
-      print(weatherJson);
       Map<String, dynamic> weatherMap = {
         'currentLocation': weatherJson['location']['name'],
         'country': weatherJson['location']['country'],
